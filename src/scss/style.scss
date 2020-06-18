@@ -1,0 +1,156 @@
+@import "vars";
+@import "fonts";
+@import "global";
+
+//-----------------------------------------------------------------------------------------------------------
+//
+//                                                    START CODE
+//
+//-----------------------------------------------------------------------------------------------------------
+
+// header start
+.header {
+    display: flex;
+
+    &__logo-inner {
+        justify-content: center;
+        margin: 0 auto;
+        padding-top: 50px;
+        flex-wrap: wrap;
+    }
+
+    &__logo {
+        font-size: 44.6px;
+        color: $violet;
+        transition: linear 0.3s;
+        max-width: 115px;
+        width: 100%;
+
+        &:hover {
+            color: $light__blue;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__social-git {
+        position: absolute;
+        transition: linear 0.3s;
+        margin-top: 111px;
+        margin-left: -470px;
+        background-image: url(../images/icons/github.svg);
+        width: 35px;
+        height: 35px;
+        z-index: 1;
+        fill: #4c43fa;
+        transition: linear 0.3s;
+        background-size: cover;
+        transform: rotate(0);
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+
+    &__social-tg {
+        position: absolute;
+        transition: linear 0.3s;
+        margin-top: 111px;
+        margin-left: -235px;
+        background-image: url(../images/icons/telegram-plane.svg);
+        width: 35px;
+        height: 35px;
+        z-index: 1;
+        fill: #4c43fa;
+        background-size: cover;
+
+        &:hover {
+            animation-name: tg;
+            animation-duration: 2.5s;
+        }
+    }
+
+    &__social-email {
+        position: absolute;
+        transition: linear 0.3s;
+        margin-top: 111px;
+        background-image: url(../images/icons/envelope.svg);
+        width: 35px;
+        height: 35px;
+        z-index: 1;
+        fill: #4c43fa;
+        transition: linear 0.3s;
+        background-size: cover;
+
+        &:hover {
+            background-image: url(../images/icons/envelope-open.svg);
+            width: 40px;
+            height: 40px;
+            background-size: cover;
+        }
+    }
+}
+
+@keyframes tg {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(75px, -75px) rotate(-180deg);
+    }
+
+    90% {
+        transform: rotate(-180deg);
+    }
+}
+
+// header end
+// menu start
+
+.menu {
+    padding-top: 55px;
+
+    &__inner {
+        list-style: none;
+    }
+
+    &__items {
+        li,
+        a {
+            font-size: 30px;
+            color: $text;
+            padding-bottom: 50px;
+            transition: all 0.3s;
+
+            &:hover {
+                color: $light__blue;
+            }
+        }
+    }
+
+    &__item-last {
+        padding-top: 35px;
+        li,
+        a {
+            color: $violet;
+            margin-top: 100px;
+
+            &:hover {
+                color: $text;
+            }
+        }
+    }
+}
+
+// menu end
+//-----------------------------------------------------------------------------------------------------------
+//
+//                                                    END CODE
+//
+//-----------------------------------------------------------------------------------------------------------
+
+@import "media";
