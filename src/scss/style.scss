@@ -20,14 +20,17 @@
     }
 
     &__logo {
-        font-size: 44.6px;
-        color: $violet;
-        transition: linear 0.3s;
         max-width: 115px;
         width: 100%;
 
-        &:hover {
-            color: $light__blue;
+        a {
+            font-size: 44.6px;
+            color: $violet;
+            transition: linear 0.3s;
+
+            &:hover {
+                color: $light__blue;
+            }
         }
     }
 
@@ -147,6 +150,241 @@
 }
 
 // menu end
+// title-link start
+
+.title-link {
+    position: relative;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    bottom: 33%;
+
+    &__head-title {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        position: relative;
+
+        a {
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 110px;
+            max-width: 285px;
+            transition: all 0.3s;
+            width: 100%;
+
+            &:hover {
+                color: $violet;
+            }
+        }
+
+        span {
+            transition: all 0.3s;
+            &:hover {
+                color: $light__blue;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: #ffffff;
+            width: 365px;
+            height: 4px;
+            bottom: 0;
+            left: 40px;
+        }
+    }
+
+    &__head-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__head-subtitle {
+        font-weight: 500;
+        font-size: 27px;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding-top: 20px;
+        padding-left: 25px;
+        transition: all 0.6s;
+        position: relative;
+        left: 55px;
+
+        &:hover {
+            color: #000;
+        }
+    }
+
+    &__head-btn {
+        display: flex;
+        left: 113px;
+        position: relative;
+        bottom: 33px;
+        font-size: 27px;
+        color: $light__blue;
+        background-color: #ffffff;
+        padding: 15px 25px;
+        border-radius: 3px;
+        border: 2px solid #ffffff;
+        transition: all 0.6s;
+
+        &:hover {
+            border: 2px solid #ffffff;
+            background-color: transparent;
+            color: $violet;
+        }
+    }
+}
+
+// title-link end
+// portfolio-items start
+
+.portfolio-items {
+    position: relative;
+    left: 22%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    bottom: 34%;
+
+    &__img-inner {
+        position: relative;
+    }
+
+    &__img-right,
+    &__img {
+        width: 625px;
+        height: 775px;
+        // height: 100%;
+        background-size: cover;
+        object-fit: cover;
+        transition: all 0.3s;
+
+        // &:hover {
+        // }
+    }
+
+    &__img {
+        margin-right: 125px;
+        margin-bottom: 100px;
+    }
+
+    &__img-right {
+        margin-right: 0;
+        margin-left: 125px;
+        margin-bottom: 100px;
+    }
+
+    &__img.on {
+        width: 660px;
+        height: 800px;
+        margin-right: 90px;
+        opacity: 0.7;
+        margin-bottom: 75px;
+    }
+
+    &__img-right.on {
+        width: 660px;
+        height: 800px;
+        margin-left: 90px;
+        opacity: 0.7;
+        margin-bottom: 75px;
+    }
+
+    &__img-tag {
+        position: absolute;
+        transform: rotate(-90deg);
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 25px;
+        background-color: $violet;
+        padding: 20px 45px;
+        top: 63%;
+        left: -135px;
+        z-index: 2;
+    }
+
+    &__portfolio-item,
+    &__portfolio-item-right {
+        display: flex;
+        justify-content: space-between;
+        // margin-bottom: 100px;
+    }
+
+    
+
+    &__info {
+        padding-top: 55px;
+    }
+
+    &__title {
+        font-size: 37px;
+        text-transform: uppercase;
+        padding-bottom: 55px;
+        color: $violet;
+    }
+
+    &__text {
+        font-size: 27px;
+        line-height: 35px;
+        color: #8c8c8d;
+        position: relative;
+
+        &::before {
+            content: "";
+            background-color: $violet;
+            width: 120px;
+            height: 5px;
+            position: absolute;
+            bottom: -45px;
+        }
+    }
+
+    &__logo-small {
+        width: 127px;
+        height: 122px;
+    }
+
+    &__logos {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 90px;
+    }
+
+    &__link {
+        padding: 15px 25px;
+        background-color: $violet;
+        font-size: 25px;
+        color: #ffffff;
+        height: 100%;
+        margin-top: 60px;
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: $light__blue;
+            color: #000000;
+        }
+    }
+
+    &__portfolio-item-right {
+        .portfolio-items__img-tag {
+            right: -135px;
+            left: unset;
+        }
+    }
+}
+
+body {
+    background-image: url(../images/portfolio-bg.png);
+    background-size: cover;
+    object-fit: cover;
+    background-position: 0px -160px;
+    background-repeat: repeat;
+    position: relative;
+}
+// portfolio-items end
 //-----------------------------------------------------------------------------------------------------------
 //
 //                                                    END CODE

@@ -53,15 +53,22 @@ body {
   padding: 25px 248px;
 }
 
+.content-new-page,
 .content {
-  max-width: 1388px;
-  min-height: 1180px;
+  // max-width: 1388px;
+  // min-height: 1180px;
   // max-width: 1943px;
   // max-height: 1652px;
+  max-width: 1290px;
+  min-height: 1030px;
   width: 100%;
   height: 100%;
+}
+
+.content {
   background-image: url(../images/main-bg.png);
   background-size: cover;
   object-fit: cover;
-  background-position: center;
+  background-position: center -50px;
 }
+
