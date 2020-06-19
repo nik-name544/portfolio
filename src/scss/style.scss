@@ -147,6 +147,37 @@
             }
         }
     }
+
+    &__item-contact {
+        cursor: pointer;
+    }
+
+    &__item-contacts {
+        transform: translateX(-200%);
+        position: absolute;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        border-radius: 5px;
+    }
+
+    &__item-contacts.on {
+        transform: translateX(0%);
+    }
+
+    .menu__item-email,
+    .menu__item-phone {
+        padding-bottom: 25px;
+        padding-top: 25px;
+        padding-right: 25px;
+        color: $text;
+        transition: all 0.3s;
+
+        &:hover {
+            color: $violet;
+        }
+    }
 }
 
 // menu end
@@ -313,8 +344,6 @@
         // margin-bottom: 100px;
     }
 
-    
-
     &__info {
         padding-top: 55px;
     }
@@ -376,15 +405,57 @@
     }
 }
 
-body {
-    background-image: url(../images/portfolio-bg.png);
-    background-size: cover;
-    object-fit: cover;
-    background-position: 0px -160px;
-    background-repeat: repeat;
-    position: relative;
-}
 // portfolio-items end
+// about start
+
+.about {
+    position: relative;
+    left: 22%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    bottom: 34%;
+
+    &__img {
+        max-width: 666px;
+        min-height: 596px;
+        background-size: cover;
+        object-fit: cover;
+        right: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    &__title {
+        font-size: 50px;
+        color: $violet;
+        padding-bottom: 50px;
+    }
+
+    &__text {
+        max-width: 370px;
+        font-size: 26px;
+        line-height: 30px;
+        color: #8c8c8d;
+        padding-bottom: 70px;
+    }
+
+    &__link {
+        background-color: $violet;
+        color: #ffffff;
+        padding: 20px 25px;
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: $light__blue;
+            color: #000000;
+        }
+    }
+
+}
+
+// about end
+
 //-----------------------------------------------------------------------------------------------------------
 //
 //                                                    END CODE

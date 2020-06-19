@@ -72,3 +72,27 @@ body {
   background-position: center -50px;
 }
 
+.portfolio-body {
+  background-image: url(../images/portfolio-bg.png);
+  background-size: cover;
+  object-fit: cover;
+  background-position: 0px -160px;
+  background-repeat: repeat;
+  position: relative;
+}
+
+.contacts-body {
+  background-size: cover;
+  object-fit: cover;
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: repeat;
+  background-position: center -190px;
+}
+
+.about-body {
+  background-size: cover;
+  object-fit: cover;
+  background-image: url(../images/about-bg.png);
+  background-repeat: repeat;
+  background-position: center 0px;
+}

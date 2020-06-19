@@ -14,4 +14,8 @@ $(function () {
             $('.portfolio-items__img').removeClass('on');
         }
     );
+
+    $('.menu__item-contact').on('click', function () {
+        $('.menu__item-contacts').toggleClass('on');
+    });
 });
