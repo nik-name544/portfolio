@@ -22,6 +22,7 @@
     &__logo {
         max-width: 115px;
         width: 100%;
+        transition: linear 0.3s;
 
         a {
             font-size: 44.6px;
@@ -164,19 +165,53 @@
 
     &__item-contacts.on {
         transform: translateX(0%);
+        z-index: 9;
     }
 
     .menu__item-email,
     .menu__item-phone {
-        padding-bottom: 25px;
-        padding-top: 25px;
-        padding-right: 25px;
+        padding: 25px;
         color: $text;
         transition: all 0.3s;
 
         &:hover {
             color: $violet;
         }
+    }
+
+    &__item {
+        animation-name: menu-on;
+        // animation-duration: 1s;
+
+        &:nth-child(1) {
+            animation-duration: 0.8s;
+        }
+
+        &:nth-child(2) {
+            animation-duration: 1s;
+        }
+
+        &:nth-child(3) {
+            animation-duration: 1.3s;
+        }
+
+        &:nth-child(4) {
+            animation-duration: 1.5s;
+        }
+
+        &:nth-child(5) {
+            animation-duration: 1.8s;
+        }
+    }
+}
+
+@keyframes menu-on {
+    0% {
+        transform: translate(-150px, -80px);
+    }
+
+    100% {
+        transform: translate(0, 0);
     }
 }
 
@@ -188,7 +223,7 @@
     left: 10%;
     display: flex;
     justify-content: center;
-    bottom: 33%;
+    bottom: 27%;
 
     &__head-title {
         display: flex;
@@ -372,8 +407,12 @@
     }
 
     &__logo-small {
-        width: 127px;
-        height: 122px;
+        max-width: 127px;
+        max-height: 122px;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        overflow: hidden;
     }
 
     &__logos {
@@ -388,8 +427,9 @@
         font-size: 25px;
         color: #ffffff;
         height: 100%;
-        margin-top: 60px;
+        margin-top: 32px;
         transition: all 0.5s;
+        border-radius: 3px;
 
         &:hover {
             background-color: $light__blue;
@@ -410,11 +450,11 @@
 
 .about {
     position: relative;
-    left: 22%;
+    left: 25%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    bottom: 34%;
+    bottom: 26%;
 
     &__img {
         max-width: 666px;
@@ -430,6 +470,11 @@
         font-size: 50px;
         color: $violet;
         padding-bottom: 50px;
+        transition: all 0.3s;
+
+        &:hover {
+            color: $light__blue;
+        }
     }
 
     &__text {
@@ -451,7 +496,6 @@
             color: #000000;
         }
     }
-
 }
 
 // about end
