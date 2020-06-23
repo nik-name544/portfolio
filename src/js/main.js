@@ -18,4 +18,9 @@ $(function () {
     $('.menu__item-contact').on('click', function () {
         $('.menu__item-contacts').toggleClass('on');
     });
+
+    $('.menu__btn').on('click', function () {
+        $('.menu__items').toggleClass('off');
+
+    });
 });

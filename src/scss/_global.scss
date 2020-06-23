@@ -56,7 +56,12 @@ body {
 }
 
 .main-portfolio {
-  padding: 25px 165px;
+  padding: 25px 235px 25px 285px;
+  // max-width: 1907px;
+  // width: 100%;
+  // max-height: 1265px;
+  // height: 100%;
+  // padding: 25px 165px;
 }
 
 .content-new-page,
@@ -73,11 +78,26 @@ body {
   height: 100%;
 }
 
-.content {
-  background-image: url(../images/main-bg.png);
-  background-size: cover;
-  object-fit: cover;
-  background-position: center -50px;
+.body-main {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/main-bg.png);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center -50px;
+    max-width: 1230px;
+    min-height: 955px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    right: 16%;
+    left: 16%;
+    top: 0%;
+  }
 }
 
 .portfolio-body {
