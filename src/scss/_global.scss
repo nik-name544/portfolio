@@ -45,14 +45,21 @@ body {
   transition: all 0.3s;
 }
 
-.main {
-  max-width: 1907px;
+.container {
+  max-width: 1500px;
   width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  // max-width: 1907px;
+  // width: 100%;
   // max-width: 100vw;
   // max-height: 100vh;
-  max-height: 1265px;
-  height: 100%;
-  padding: 25px 235px 25px 285px;
+  // max-height: 1265px;
+  // height: 100%;
+  // padding: 25px 235px 25px 285px;
 }
 
 .main-portfolio {
