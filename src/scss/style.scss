@@ -351,7 +351,7 @@
 
     &__tags {
         position: absolute;
-        right: 25px;
+        right: -10px;
     }
 
     &__head-inner {
@@ -563,6 +563,9 @@
 
     &__info {
         padding-top: 55px;
+        // max-width: 720px;
+        max-width: 38vw;
+        width: 100%;
     }
 
     &__title {
@@ -659,7 +662,9 @@
 
     &__img {
         max-width: 666px;
-        min-height: 596px;
+        width: 100%;
+        max-height: 596px;
+        height: 100%;
         background-size: cover;
         // object-fit: cover;
         // right: 0;
